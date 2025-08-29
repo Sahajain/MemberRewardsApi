@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Member Rewards</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 font-sans">
+    <div class="container mx-auto p-8">
+        <h1 class="text-4xl font-bold text-center text-gray-800 mb-8">Member Rewards Portal</h1>
+
+        <!-- Registration & Verification -->
+        <div class="bg-white p-6 rounded-lg shadow-md mb-8">
+            <h2 class="text-2xl font-semibold mb-4">1. Register & Verify</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                    <label for="mobileNumber" class="block text-sm font-medium text-gray-700">Mobile Number</label>
+                    <input type="text" id="mobileNumber" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" placeholder="e.g., 1234567890">
+                    <button id="registerBtn" class="mt-2 w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Register</button>
+                </div>
+                <div>
+                    <label for="otp" class="block text-sm font-medium text-gray-700">OTP</label>
+                    <input type="text" id="otp" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" placeholder="Enter OTP from console">
+                    <button id="verifyBtn" class="mt-2 w-full bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">Verify</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Authenticated Actions -->
+        <div id="authedSection" class="hidden bg-white p-6 rounded-lg shadow-md">
+            <h2 class="text-2xl font-semibold mb-4">Authenticated Actions</h2>
+            <p class="mb-2"><strong>Member ID:</strong> <span id="memberIdDisplay"></span></p>
+            <p class="mb-4"><strong>Current Points:</strong> <span id="pointsDisplay"></span> <button id="refreshPointsBtn" class="text-sm text-blue-500">Refresh</button></p>
+
+            <!-- Add Points -->
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold mb-2">2. Add Points</h3>
+                <label for="purchaseAmount" class="block text-sm font-medium text-gray-700">Purchase Amount (₹)</label>
+                <input type="number" id="purchaseAmount" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm" placeholder="e.g., 500">
+                <button id="addPointsBtn" class="mt-2 w-full bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded">Add Points</button>
+            </div>
+
+            <!-- Redeem Coupons -->
+            <div>
+                <h3 class="text-xl font-semibold mb-2">3. Redeem Coupons</h3>
+                <div class="flex space-x-4">
+                    <button data-points="500" class="redeemBtn flex-1 bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded">Redeem 500 pts for ₹50</button>
+                    <button data-points="1000" class="redeemBtn flex-1 bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">Redeem 1000 pts for ₹100</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Message Area -->
+        <div id="messageArea" class="mt-8 p-4 rounded-md text-center"></div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
