@@ -39,6 +39,9 @@ MemberRewards/
 ```
 
 ---
+## Postman Collection
+
+(https://sahaj-s-team.postman.co/workspace/My-Workspace~05050fb7-7f40-4a8f-8d59-af4043b6c8ea/request/47897660-4d3af08b-ecb3-40ce-92ae-4fb96e58759e?action=share&creator=47897660&ctx=documentation)
 
 ## Database Schema (PostgreSQL)
 
@@ -178,18 +181,3 @@ Authenticated endpoints require a **Bearer token** in the `Authorization` header
 
 ---
 
-## Postman Collection
-
-You can use the provided **Postman Collection** to test the API.
-
-### Steps:
-1. Import the JSON file into **Postman**.  
-2. Configure `baseUrl`: Set it to your API’s URL (e.g., `https://localhost:7123`).  
-3. Workflow:
-   - Run **`1. Register Member`** request.
-   - Copy the OTP from the response and paste it into the `generated_otp` collection variable.
-   - Run **`2. Verify OTP & Get Token`** request → This sets `jwt_token` and `member_id` automatically.
-   - Use other authenticated requests with the generated token.
-
----
- You can now use the other authenticated requests!
