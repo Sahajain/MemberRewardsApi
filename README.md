@@ -41,7 +41,7 @@ MemberRewards/
 ---
 ## Postman Collection
 
-(https://sahaj-s-team.postman.co/workspace/My-Workspace~05050fb7-7f40-4a8f-8d59-af4043b6c8ea/request/47897660-4d3af08b-ecb3-40ce-92ae-4fb96e58759e?action=share&creator=47897660&ctx=documentation)
+https://sahaj-s-team.postman.co/workspace/My-Workspace~05050fb7-7f40-4a8f-8d59-af4043b6c8ea/collection/47897660-a7944636-d4ae-4b09-9ff2-f774ef0accd5?action=share&creator=47897660
 
 ## Database Schema (PostgreSQL)
 
